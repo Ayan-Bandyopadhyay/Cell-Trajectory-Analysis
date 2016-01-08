@@ -1,0 +1,17 @@
+{
+    "contents" : "Package: CellTrajectoryAnalysis\nType: Package\nTitle: What the Package Does (Title Case)\nVersion: 0.1\nDate: 2016-01-04\nAuthors@R: person(\"First\", \"Last\", email = \"first.last@example.com\", role = c(\"aut\", \"cre\"))\nDescription: More about what it does (maybe more than one line)\nLicense: What license is it under?\nLazyData: TRUE\nRoxygenNote: 5.0.1\n",
+    "created" : 1452057743754.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2383720600",
+    "id" : "6B70EB44",
+    "lastKnownWriteTime" : 1451978334,
+    "path" : "~/R genecamp/CellTrajectoryAnalysis/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "dcf"
+}
