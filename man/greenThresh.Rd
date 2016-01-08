@@ -15,7 +15,7 @@ a binary \code{Frames} object in the green color channel
 \description{
 Green pixels, or pixels with H value between 61/360 and 140/360 and
 S value over 0.15 in the HSV color scheme, are treated as foreground.
-All other pixels are treated as background. This is useful in detecting the
+All other pixels are treated as background. This is useful for detecting the
 Green Flourescence Protein used to denote that a cell is alive.
 }
 \examples{
