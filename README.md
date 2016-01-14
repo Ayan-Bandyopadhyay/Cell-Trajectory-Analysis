@@ -7,6 +7,7 @@ Cell-Trajectory-Analysis
 
 
 ###fitModelKNN_CV
-
-###fitModelKNN_CV
+###generateTraj
+###greenThresh
+###trajMeasures
 
