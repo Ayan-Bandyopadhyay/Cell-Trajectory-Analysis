@@ -9,8 +9,10 @@ taken with fluorescence microscopy. This functions can be used to threshold vide
 
 ###fitModelKNN_CV
 **Description**
+#
 Fits trajectory data into a K-nearest neighbors classifier using leave one out cross validation.
 **Usage**
+#
 fitModelKNN_CV(trajDataFrame, labelVector, kVal)
 **Arguments**
 trajDataFrame	     A data frame with measures for each trajectory. This can be produced by function trajMeasures
