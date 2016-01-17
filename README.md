@@ -125,7 +125,7 @@ Removes trajectories with less than 4 data points. Generates 24 measures for eac
 #
 **Usage**
 #
-trajMeasures(trajSet)
+trajMeasures(trajSet, spf)
 #
 **Arguments**
 #
@@ -147,5 +147,5 @@ Ayan Bandyopadhyay, Bellarmine College Prep
 ```r
 library(flowcatchR)
 trajPlatelets <- trajectories(particles(channel.Frames(MesenteriumSubset,"red")))
-trajData <-trajMeasures(trajPlatelets)
+trajData <-trajMeasures(trajPlatelets, 1)
 ```
