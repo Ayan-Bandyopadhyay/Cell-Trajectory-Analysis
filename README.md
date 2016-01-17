@@ -55,34 +55,38 @@ generateTraj(particles, L = 26, R = 3, epsilon1 = 0, epsilon2 = 0,
 #
 particles	          A ParticleSet object
 #
-L	                  Maximum number of pixels an object can move in two consecutive frames
+L	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum number of pixels an object can move in two consecutive frames
 #
-R	                  Linkrange, i.e. the number of consecutive frames to search for potential candidate links
+R	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linkrange, i.e. the number of consecutive frames to search for potential candidate links
 #
-epsilon1	          A numeric value, to be used in the formula. Jitter for allowing angular displacements
+epsilon1	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A numeric value, to be used in the formula. Jitter for allowing angular displacements
 #
-epsilon2	          A numeric value, to be used in the formula. Jitter for allowing spatial displacements
+epsilon2	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp A numeric value, to be used in the formula. Jitter for allowing spatial displacements
 #
-lambda1	            A numeric value. Multiplicative factor for the penalty function
+lambda1	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A numeric value. Multiplicative factor for the penalty function
 #
-lambda2	            A numeric value. Multiplicative factor applied to the angular displacement
+lambda2	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A numeric value. Multiplicative factor applied to the angular displacement
 #
-penaltyFunction     A function structured in such a way to be applied as penalty function in the linking
+penaltyFunction &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A function structured in such a way to be applied as penalty function in the linking
 #
-include.area	      Logical, whether to include also area change of the particles in the cost function calculation
+include.area	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Logical, whether to include also area change of the particles in the cost function calculation
 #
-frames	            The Frames object that the ParticleSet object is derived from
+frames	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       The Frames object that the ParticleSet object is derived from
 #
-verboseOutput	      Logical, whether the output should report additional intermediate steps. For debugging use mainly.
+verboseOutput	  &nbsp;&nbsp;&nbsp;    Logical, whether the output should report additional intermediate steps. For debugging use mainly.
 #
-prog	              Logical, whether the a progress bar should be shown during the tracking phase
+prog	     &nbsp;&nbsp;&nbsp;&nbsp;         Logical, whether the a progress bar should be shown during the tracking phase
 #
-include.intensity	  Logical, whether to include also intensity change of the particles in the cost function calculation
+include.intensity	 &nbsp;&nbsp;&nbsp;&nbsp; Logical, whether to include also intensity change of the particles in the cost function calculation
 #
 **Value**
+#
 A TrajectorySet object
+#
 **Author**
+#
 Ayan Bandyopadhyay, Bellarmine College Prep
+#
 **Examples**
 ```r
 library(flowcatchR)
@@ -97,16 +101,21 @@ trajSet <- generateTraj(platelets,
 
 ###greenThresh
 **Description**
+#
 Green pixels, or pixels with H value between 61/360 and 140/360 and S value over 0.15 in the HSV color scheme, are treated as foreground. All other pixels are treated as background. This is useful in detecting the Green Flourescence Protein used to denote cell viability.
-
+#
 **Usage**
+#
 greenThresh(frames)
+#
 **Arguments**
-
+#
 frames	             A Frames object with all 3 color channels(R,G,B)
-
+#
 **Value**
+#
 **Author**
+#
 **Examples**
 
 
