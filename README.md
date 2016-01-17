@@ -20,9 +20,9 @@ fitModelKNN_CV(trajDataFrame, labelVector, kVal)
 #
 trajDataFrame &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A data frame with measures for each trajectory. This can be produced by function trajMeasures
 #
-labelVector	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A vector of labels for each trajectory. Its length must be equal to the number of rows in trajDataFrame
+labelVector	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A vector of labels for each trajectory. Its length must be equal to the number of rows in trajDataFrame
 #
-kVal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	The number of neighbors used for classification
+kVal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	The number of neighbors used for classification
 #
 **Value**
 #
