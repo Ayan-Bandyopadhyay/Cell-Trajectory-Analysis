@@ -8,6 +8,7 @@ trajMeasures(trajSet)
 }
 \arguments{
 \item{trajSet}{This is a \code{TrajectorySet} object,}
+\item{spf}{Numeric. Seconds elapsed per frame.}
 }
 \value{
 A matrix 24 columns wide. Each row corresponds to one trajectory.
