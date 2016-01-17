@@ -9,22 +9,35 @@ taken with fluorescence microscopy. This functions can be used to threshold vide
 
 ###fitModelKNN_CV
 **Description**
-####Usage
+Fits trajectory data into a K-nearest neighbors classifier using leave one out cross validation.
+**Usage**
+fitModelKNN_CV(trajDataFrame, labelVector, kVal)
+**Arguments**
+trajDataFrame	     A data frame with measures for each trajectory. This can be produced by function trajMeasures
+labelVector	       A vector of labels for each trajectory. Its length must be equal to the number of rows in trajDataFrame
+kVal	             The number of neighbors used for classification
+**Value**
+A vector of classified labels for each trajectory
 
-####Arguments
-####Value
-####Author
-####Examples
+**Author**
+Ayan Bandyopadhyay, Bellarmine College Prep
+**Examples**
+```r
+data <- as.data.frame(matrix(1:4,nrow = 2,ncol = 2))
+labels <- c("live","dead")
+classifierKNN_CV<- fitModelKNN_CV(data,labels,3)
+```
 
 
 
 ###generateTraj
-####Description
-####Usage
+**Description**
+Returns a TrajectorySet so that the y value is the distance from the bottom of the Frames object, not from the top
+**Usage**
 generateTraj(particles, L = 26, R = 3, epsilon1 = 0, epsilon2 = 0,
   lambda1 = 1, lambda2 = 0, penaltyFunction = penaltyFunctionGenerator(),
   include.area = FALSE, frames)
-####Arguments
+**Arguments**
 particles	          A ParticleSet object
 L	                  Maximum number of pixels an object can move in two consecutive frames
 R	                  Linkrange, i.e. the number of consecutive frames to search for potential candidate links
@@ -38,11 +51,11 @@ frames	            The Frames object that the ParticleSet object is derived from
 verboseOutput	      Logical, whether the output should report additional intermediate steps. For debugging use mainly.
 prog	              Logical, whether the a progress bar should be shown during the tracking phase
 include.intensity	  Logical, whether to include also intensity change of the particles in the cost function calculation
-####Value
+**Value**
 A TrajectorySet object
-####Author
+**Author**
 Ayan Bandyopadhyay, Bellarmine College Prep
-####Examples
+**Examples**
 ```r
 library(flowcatchR)
 platelets <-particles(channel.Frames(MesenteriumSubset,"red"))
@@ -55,18 +68,25 @@ trajSet <- generateTraj(platelets,
 ```
 
 ###greenThresh
-####Description
-####Usage
-####Arguments
-####Value
-####Author
-####Examples
+**Description**
+Green pixels, or pixels with H value between 61/360 and 140/360 and S value over 0.15 in the HSV color scheme, are treated as foreground. All other pixels are treated as background. This is useful in detecting the Green Flourescence Protein used to denote cell viability.
+
+**Usage**
+greenThresh(frames)
+**Arguments**
+
+frames	             A Frames object with all 3 color channels(R,G,B)
+
+**Value**
+**Author**
+**Examples**
 
 
 ###trajMeasures
-####Description
-####Usage
-####Arguments
-####Value
-####Author
-####Examples
+**Description**
+**Usage**
+
+**Arguments**
+**Value**
+**Author**
+**Examples**
