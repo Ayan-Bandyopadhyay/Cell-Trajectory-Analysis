@@ -166,6 +166,7 @@ generateTraj <- function (particles,
 #'
 #' Removes trajectories with less than 4 data points
 #' @param trajSet This is a \code{TrajectorySet} object,
+#' @param spf Numeric. Seconds elapsed per frame.
 #' @return A matrix 24 columns wide. Each row corresponds to one trajectory.
 #' @examples
 #' library(flowcatchR)
@@ -174,7 +175,7 @@ generateTraj <- function (particles,
 #' @export
 #' @author Ayan Bandyopadhyay, Bellarmine College Prep 11/26/2015
 
-trajMeasures <- function(trajSet)
+trajMeasures <- function(trajSet,spf)
 {
   # checks if required packages are loaded
   if (!requireNamespace("class", quietly = TRUE) )
@@ -211,7 +212,7 @@ trajMeasures <- function(trajSet)
     {
       newVector <- trajVector[1:index[i]]
       newFrame <- matrix(nrow=2,ncol=index[[i]],append(newVector,1:index[i]),byrow= TRUE)
-      timeFrame <- matrix(nrow=2,ncol=index[[i]],append(1:index[i],1:index[i]),byrow= TRUE)
+      timeFrame <- matrix(nrow=2,ncol=index[[i]],append(1:index[i]*spf,1:index[i]),byrow= TRUE)
       s1 <- step1measures(newFrame,timeFrame, ID = FALSE)
       trajData <- as.numeric(s1$measurments[1,])[2:length(as.vector(s1$measurments[1,]))]
       trajDataMatrix[i,] <- trajData
