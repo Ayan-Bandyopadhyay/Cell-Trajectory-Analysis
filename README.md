@@ -110,9 +110,9 @@ greenThresh(frames)
 #
 **Arguments**
 #
-Argument | Description
----------|------------
-frames| A Frames object with all 3 color channels(R,G,B)
+|Argument | Description|
+|---------|------------|
+|frames| A Frames object with all 3 color channels(R,G,B)|
 #
 **Value**
 #
