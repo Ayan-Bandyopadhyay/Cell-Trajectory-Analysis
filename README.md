@@ -8,7 +8,7 @@ taken with fluorescence microscopy. This functions can be used to threshold vide
 ##Documentation 
 
 ###fitModelKNN_CV
-####Description
+**Description**
 ####Usage
 
 ####Arguments
