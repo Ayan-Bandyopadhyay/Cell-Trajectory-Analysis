@@ -130,7 +130,7 @@ trajMeasures(trajSet)
 **Arguments**
 #
 Argument | Description
-----------------------
+---------|------------
 trajSet | This is a TrajectorySet object
 spf | Numeric. Seconds elapsed per frame.
 #
