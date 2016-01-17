@@ -19,7 +19,7 @@ Removes trajectories with less than 4 data points
 \examples{
 library(flowcatchR)
 trajPlatelets <- trajectories(particles(channel.Frames(MesenteriumSubset,"red")))
-trajData <-trajMeasures(trajPlatelets)
+trajData <-trajMeasures(trajPlatelets, 1)
 }
 \author{
 Ayan Bandyopadhyay, Bellarmine College Prep 11/26/2015
