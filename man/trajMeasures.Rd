@@ -4,7 +4,7 @@
 \alias{trajMeasures}
 \title{Generates 24 measures for each trajectory}
 \usage{
-trajMeasures(trajSet)
+trajMeasures(trajSet, spf)
 }
 \arguments{
 \item{trajSet}{This is a \code{TrajectorySet} object,}
