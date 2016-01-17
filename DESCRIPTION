@@ -4,8 +4,10 @@ Title: Functions for biological trajectory analysis and video processing
 Version: 0.1
 Date: 2016-01-04
 Authors@R: person("Ayan", "Bandyopadhyay", email = "ayanb9440@gmail.com", role = c("aut", "cre"))
-Description: Includes functions for thresholding to identify green flourescence, generate trajectory data, and 
-classify trajectories using the K-nearest-neighbors statistical learning model.
+Description: Cell-Trajectory-Analysis is a set of functions for cell tracking and biological trajectory analysis, to be used on video 
+taken with fluorescence microscopy. This functions can be used to threshold video to detect cells marked with green fluorescence protein, 
+generate trajectories for each cell, quantify each trajectory, and classify each trajectory using the k-nearest neighbors statistical 
+learning model. This package is dependent on two other packages, namely flowcatchR and traj.
 License: NA
 LazyData: TRUE
 RoxygenNote: 5.0.1
