@@ -17,12 +17,11 @@ Fits trajectory data into a K-nearest neighbors classifier using leave one out c
 fitModelKNN_CV(trajDataFrame, labelVector, kVal)
 #
 **Arguments**
-#
-trajDataFrame &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A data frame with measures for each trajectory. This can be produced by function trajMeasures
-#
-labelVector	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A vector of labels for each trajectory. Its length must be equal to the number of rows in trajDataFrame
-#
-kVal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	The number of neighbors used for classification
+Argument | Description
+---------|------------
+trajDataFrame | A data frame with measures for each trajectory. This can be produced by function trajMeasures
+labelVector	| A vector of labels for each trajectory. Its length must be equal to the number of rows in trajDataFrame
+kVal | The number of neighbors used for classification
 #
 **Value**
 #
@@ -52,32 +51,21 @@ generateTraj(particles, L = 26, R = 3, epsilon1 = 0, epsilon2 = 0,
   include.area = FALSE, frames)
 #
 **Arguments**
-#
-particles	          A ParticleSet object
-#
-L	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maximum number of pixels an object can move in two consecutive frames
-#
-R	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Linkrange, i.e. the number of consecutive frames to search for potential candidate links
-#
-epsilon1	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A numeric value, to be used in the formula. Jitter for allowing angular displacements
-#
-epsilon2	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp A numeric value, to be used in the formula. Jitter for allowing spatial displacements
-#
-lambda1	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A numeric value. Multiplicative factor for the penalty function
-#
-lambda2	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A numeric value. Multiplicative factor applied to the angular displacement
-#
-penaltyFunction &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A function structured in such a way to be applied as penalty function in the linking
-#
-include.area	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     Logical, whether to include also area change of the particles in the cost function calculation
-#
-frames	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       The Frames object that the ParticleSet object is derived from
-#
-verboseOutput	  &nbsp;&nbsp;&nbsp;    Logical, whether the output should report additional intermediate steps. For debugging use mainly.
-#
-prog	     &nbsp;&nbsp;&nbsp;&nbsp;         Logical, whether the a progress bar should be shown during the tracking phase
-#
-include.intensity	 &nbsp;&nbsp;&nbsp;&nbsp; Logical, whether to include also intensity change of the particles in the cost function calculation
+Argument | Description
+---------|------------
+particles | A ParticleSet object
+L	| Maximum number of pixels an object can move in two consecutive frames
+R	| Linkrange, i.e. the number of consecutive frames to search for potential candidate links
+epsilon1 | A numeric value, to be used in the formula. Jitter for allowing angular displacements
+epsilon2 | A numeric value, to be used in the formula. Jitter for allowing spatial displacements
+lambda1	| A numeric value. Multiplicative factor for the penalty function
+lambda2	| A numeric value. Multiplicative factor applied to the angular displacement
+penaltyFunction | A function structured in such a way to be applied as penalty function in the linking
+include.area | Logical, whether to include also area change of the particles in the cost function calculation
+frames	| The Frames object that the ParticleSet object is derived from
+verboseOutput	|  Logical, whether the output should report additional intermediate steps. For debugging use mainly.
+prog	| Logical, whether the a progress bar should be shown during the tracking phase
+include.intensity	| Logical, whether to include also intensity change of the particles in the cost function calculation
 #
 **Value**
 #
@@ -110,22 +98,52 @@ greenThresh(frames)
 #
 **Arguments**
 #
-|Argument | Description|
-|---------|------------|
-|frames| A Frames object with all 3 color channels(R,G,B)|
+Argument | Description
+---------|------------
+frames| A Frames object with all 3 color channels(R,G,B)
 #
 **Value**
 #
+a binary Frames object in the green color channel
+#
 **Author**
 #
+Ayan Bandyopadhyay, Bellarmine College Prep
+#
 **Examples**
-
+```r
+library(flowcatchR)
+threshedFrames <- greenThresh(MesenteriumSubset)
+```
 
 ###trajMeasures
 **Description**
+#
+Removes trajectories with less than 4 data points. Generates 24 measures for each trajectory, including range, mean-over-time, standard deviation, coefficient of variation, change, and slope of the linear model. The full list of measures can be found in the vignette for package traj.
+#
 **Usage**
-
+#
+trajMeasures(trajSet)
+#
 **Arguments**
+#
+Argument | Description
+----------------------
+trajSet | This is a TrajectorySet object
+spf | Numeric. Seconds elapsed per frame.
+#
 **Value**
+#
+A matrix 24 columns wide. Each row corresponds to one trajectory.
+#
 **Author**
+#
+Ayan Bandyopadhyay, Bellarmine College Prep
+#
 **Examples**
+#
+```r
+library(flowcatchR)
+trajPlatelets <- trajectories(particles(channel.Frames(MesenteriumSubset,"red")))
+trajData <-trajMeasures(trajPlatelets)
+```
