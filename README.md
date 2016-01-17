@@ -17,6 +17,7 @@ Fits trajectory data into a K-nearest neighbors classifier using leave one out c
 fitModelKNN_CV(trajDataFrame, labelVector, kVal)
 #
 **Arguments**
+#
 Argument | Description
 ---------|------------
 trajDataFrame | A data frame with measures for each trajectory. This can be produced by function trajMeasures
@@ -51,6 +52,7 @@ generateTraj(particles, L = 26, R = 3, epsilon1 = 0, epsilon2 = 0,
   include.area = FALSE, frames)
 #
 **Arguments**
+#
 Argument | Description
 ---------|------------
 particles | A ParticleSet object
