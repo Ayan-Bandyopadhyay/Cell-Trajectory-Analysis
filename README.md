@@ -18,11 +18,11 @@ fitModelKNN_CV(trajDataFrame, labelVector, kVal)
 #
 **Arguments**
 #
-trajDataFrame &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A data frame with measures for each trajectory. This can be produced by function trajMeasures
+trajDataFrame &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A data frame with measures for each trajectory. This can be produced by function trajMeasures
 #
-labelVector	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A vector of labels for each trajectory. Its length must be equal to the number of rows in trajDataFrame
+labelVector	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A vector of labels for each trajectory. Its length must be equal to the number of rows in trajDataFrame
 #
-kVal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	The number of neighbors used for classification
+kVal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	The number of neighbors used for classification
 #
 **Value**
 #
@@ -55,9 +55,9 @@ generateTraj(particles, L = 26, R = 3, epsilon1 = 0, epsilon2 = 0,
 #
 particles	          A ParticleSet object
 #
-L	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maximum number of pixels an object can move in two consecutive frames
+L	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maximum number of pixels an object can move in two consecutive frames
 #
-R	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Linkrange, i.e. the number of consecutive frames to search for potential candidate links
+R	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Linkrange, i.e. the number of consecutive frames to search for potential candidate links
 #
 epsilon1	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A numeric value, to be used in the formula. Jitter for allowing angular displacements
 #
