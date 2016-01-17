@@ -18,7 +18,7 @@ fitModelKNN_CV(trajDataFrame, labelVector, kVal)
 #
 **Arguments**
 #
-trajDataFrame	     A data frame with measures for each trajectory. This can be produced by function trajMeasures
+trajDataFrame &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A data frame with measures for each trajectory. This can be produced by function trajMeasures
 #
 labelVector	       A vector of labels for each trajectory. Its length must be equal to the number of rows in trajDataFrame
 #
