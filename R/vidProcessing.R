@@ -140,6 +140,11 @@ generateTraj <- function (particles,
                          penaltyFunction=penaltyFunctionGenerator(),
                          include.area=FALSE, frames)
 {
+  # checks if required packages are loaded
+  if (!requireNamespace("flowcatchR", quietly = TRUE) )
+  {
+    stop("flowcatchR needed for this function to work. Please install it.", call. = FALSE)
+  }
   linkedParticles <- link.particles(particles,
                                     L=L, R=R,
                                     epsilon1=epsilon1, epsilon2=epsilon2,
@@ -171,8 +176,17 @@ generateTraj <- function (particles,
 
 trajMeasures <- function(trajSet)
 {
-  library(class)
-  library(traj)
+  # checks if required packages are loaded
+  if (!requireNamespace("class", quietly = TRUE) )
+  {
+    stop("class needed for this function to work. Please install it.", call. = FALSE)
+  }
+  
+  # checks if required packages are loaded
+  if (!requireNamespace("traj", quietly = TRUE) )
+  {
+    stop("traj needed for this function to work. Please install it.", call. = FALSE)
+  }
 
   # create 2 vectors: trajVector and index
   trajData <- list()
